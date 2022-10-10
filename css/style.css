@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&family=Oswald&family=Roboto&family=Roboto+Condensed&display=swap');
+
+html, body {/**background: hsl(184, 100%, 83%);**/ 
+    /**background-image: url('../objects/object-12.jpeg');**/
+    background-color: rgb(137, 133, 126);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 0; margin: 4; font-family: 'Open Sans Condensed', sans-serif; font-size: 18px;
+}
+
+/** Применяем Брейкпоинты Медиазапросы Чтобы работала адаптивная верстка**/
+@media (max-width: 960px) {
+    .body {
+        max-width: 760px;
+    }
+}
+@media (max-width: 780px) {
+    .body {
+        max-width: 760px;
+    }
+}
+@media (max-width: 767px) {
+    .body {
+        max-width: 750px;
+    }
+}
+
+#header {max-width: 1400px; margin: 0 auto;}
+#header .logo{max-width: 500px; float:left;}
+#header .contacts {max-width: 200px; float:right; text-align: right; margin-top: 10px;}
+#header .contacts a{color:#757373; text-decoration: none; font-weight: bold;}
+
+#header .contacts .phone {border-radius: 20px; background-color: #28c5e6;}
+#header .contacts .phone a{font-size: 30px;}
+#header .contacts .phone p{text-align: center; transition-duration: 1s; /* Анимация */}
+#header .contacts .phone:hover {text-decoration: none; color: red;}
+
+#header .contacts .call-order {border-radius: 20px; background-color: #28c5e6;}
+#header .contacts .call-order a{font-size: 30px;}
+#header .contacts .call-order p{text-align: center; transition-duration: 1s; /* Анимация */}
+#header .contacts .call-order:hover {text-decoration: none; color: red;}
+
+/* Чтобы работала адаптивная верстка убираем везде фиксированную ширину и ставим max-width:(например max-width: 960px;)*/
+
+#top_menu {max-width: 1400px; background: #f3f3f3; margin: 0 auto; clear: both; border-radius: 20px; box-shadow: 0 2px 40px;}
+#top_menu ul{margin: 30 0px;}
+
+
+
+#top_menu ul li{
+    display: inline-block;
+    margin: 0px 30px 0px 55px;
+}
+#top_menu ul li a{
+    display: inline-block; color: #7e7e7e; text-decoration: none; 
+    padding: 20px 48px 20px; transition-duration: 1s; transition-timing-function: ease; /* Анимация */
+}
+#top_menu ul li a:hover, #top_menu ul li a.active {background: #28c5e6; color: red; padding: 20px 60px 20px;}
+
+#middle {max-width: 1400px; margin: 0 auto; min-height: 200px; padding: 5px 0;}
+#middle .left-site {float: left; width: 267px;}
+
+#middle .left-site .block {background: #f3f3f3; box-shadow: 0 2px 40px;}
+#middle .left-site .block h3 {background: #28c5e6; color: white; padding: 10px 10px 10px; text-align: center; margin: 0;}
+#middle .left-site .block ul {background: #f3f3f3; padding: 0; margin-top: 2px;}
+#middle .left-site .block ul li {display: block;}
+#middle .left-site .block ul li a {display: block; color: #7e7e7e; text-decoration: none; padding: 10px 10px 10px; transition-duration: 2s; /* Анимация */}
+#middle .left-site .block ul li a:hover {background: #6728e6; color: white;}
+
+#middle .left-site .block ul li a.active {background: #28c5e6; color: white;}
+
+#middle .main {margin-left: 296px;}
+#middle .main .quote {background: #28c5e6; color: white; padding: 30px; border-radius: 20px; margin-bottom: 5px;}
+#middle .main .quote p {margin: 0; padding: 10px;}
+#middle .main .quote p.quote-text {font-style: italic; font-family: "sans-serif";}
+#middle .main .quote p.quote-sign {font-style: italic; font-family: "Open sans"; font-weight: bold; text-align: right; padding-top: 10px;}
+
+#middle .main .content {padding: 30px; background-color: #28bde6; border-radius: 20px;}
+
+#middle .main .advanteges h3 {background: #28c5e6; color: white; padding: 10px 30px 10px; margin: 0 0 20; color: white;}
+/*используем FLEXBOX*/
+#middle .main .advanteges .containers { display: flex; flex-wrap: wrap; justify-content: center;}
+
+#middle .main .advanteges .adv {display: inline-block; width: 358PX; text-align: center; background-color: #28bde6; margin: 5px;}
+
+
+/*#middle .main .advanteges .adv-1 {display: inline-block; width: 212px; text-align: center; background-color: #28bde6; margin-left: 1px;}
+#middle .main .advanteges .adv-2 {display: inline-block; width: 212px; text-align: center; background-color: #28bde6; margin-left: 8px;}
+#middle .main .advanteges .adv-3 {display: inline-block; width: 212px; text-align: center; background-color: #28bde6; margin-left: 8px;}*/
+
+#middle .main .advanteges .adv h4 {text-align: center; color: #e65828;}
+
+.img {max-width: 430px; margin: 1px 1px;}
+.img:hover {
+    transform: scale(1.1, 1.1);
+}
+h3 {text-align: center;}
+.inf-1-1 {margin-left: 30px; color: rgb(0, 26, 255);}
+.phone {background-color: aqua;}
+.call-order {background-color: cornflowerblue;}
+span {font-size: larger; font-size: 28px;}
+
+
+
+#middle-foto {max-width: 1400px; margin: 0 auto; min-height: 200px; padding: 5px 0;}
+.foto { max-width: 1400px;}
+
+
+
+
+/* Создаем ПЛАГИН с КАРТОЧКАМИ (flex box) для файла photo.html  */
+.container {
+    width: 100%;
+    display: flex;
+    padding: 0 20px;
+}
+
+.slide {
+    height: 80vh;
+    border-radius: 20px;
+    margin: 10px;
+    cursor: pointer;
+    color: #fff;
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: all 500ms ease-in-out;
+}
+
+.slide h3 {
+    position: absolute;
+    font-size: 4px;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.slide.active {
+    flex: 10;
+}
+
+.slide.active h3 {
+    opacity: 1;
+    transition: opacity 0,3s ease-in 0,4s;
+}
+
+
+
+
+
+
+/*Делаем сетку 3 на 2 GRID Фото одноэтажных домов*/
+.pr-one-hous-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);/* Повторение ячеек Три столбца Одна фракция*/
+    grid-template-rows: repeat(2, 1fr);
+    
+    gap: 30px 10px;
+    justify-items: center;
+    background-color: burlywood;
+    padding: 20px;
+}
+
+/* Адаптивная верстка Медиазапрос */
+@media screen and (max-width: 1280px) {
+    .pr-one-hous-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .pr-one-hous-grid {
+        grid-template-columns: repeat(1, 1fr);
+}
+}
+
+/*Делаем сетку 3 на 1 GRID Фото одноэтажных домов с Мансардой*/
+.pr-one-hous-mans-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);/* Повторение ячеек Три столбца Одна фракция*/
+    grid-template-rows: repeat(1, 1fr);
+    gap: 30px;
+    justify-items: center;
+    background-color: burlywood;
+    padding: 20px;
+}
+
+/* Адаптивная верстка Медиазапрос */
+@media screen and (max-width: 1280px) {
+    .pr-one-hous-mans-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .pr-one-hous-mans-grid {
+        grid-template-columns: repeat(1, 1fr);
+}
+}
+
+/*Делаем сетку 3 на 1 GRID Фото Двухэтажных домов*/
+.pr-two-hous-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);/* Повторение ячеек Три столбца Одна фракция*/
+    grid-template-rows: repeat(1, 1fr);
+    gap: 30px;
+    justify-items: center;
+    background-color: burlywood;
+    padding: 20px;
+}
+
+/* Адаптивная верстка Медиазапрос */
+@media screen and (max-width: 1280px) {
+    .pr-two-hous-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .pr-two-hous-grid {
+        grid-template-columns: repeat(1, 1fr);
+}
+}
+
+.pr-one-hous-1 {
+    border: 2px dashed rgb(0, 26, 255);
+}
+.pr-one-hous-2 {
+    border: 2px dashed rgb(0, 26, 255);
+}
+.pr-one-hous-3 {
+    border: 2px dashed rgb(0, 26, 255);
+}
+.pr-one-hous-4 {
+    border: 2px dashed rgb(0, 26, 255);
+}
+.pr-one-hous-5 {
+    border: 2px dashed rgb(0, 26, 255);
+}
+.pr-one-hous-6 {
+    border: 2px dashed rgb(0, 26, 255);
+}
+
+.pr-one-hous-7 {
+    border: 2px dashed rgb(0, 26, 255);
+}
+.pr-one-hous-8 {
+    border: 2px dashed rgb(0, 26, 255);
+}
+.pr-one-hous-9 {
+    border: 2px dashed rgb(0, 26, 255);
+}
+
+.pr-one-hous-10 {
+    border: 2px dashed rgb(0, 26, 255);
+}
+.pr-one-hous-11 {
+    border: 2px dashed rgb(0, 26, 255);
+}
+.pr-one-hous-12 {border: 2px dashed rgb(0, 26, 255);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+#footer {background: #757374; clear: both; color: white;}
+#footer .inner {max-width: 1400px; margin: 0 auto; min-height: 100px; padding: 40px 30px; }
+#footer .inner .krivorozh-kap-stroi {max-width: 300px; float: left;}
+#footer .inner .unibix {max-width: 300px; float: right; text-align: right; color: white;}
+#footer .inner .unibix a {color: white;}
+#footer .inner .unibix a:hover {text-decoration: none; color: aqua;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
